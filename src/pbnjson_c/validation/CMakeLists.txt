@@ -25,7 +25,7 @@ add_custom_target(
 
 add_custom_command(
 	SOURCE json_schema_grammar.y
-	COMMAND ${CMAKE_CURRENT_SOURCE_DIR}/apply_lemon.sh
+	COMMAND bash ${CMAKE_CURRENT_SOURCE_DIR}/apply_lemon.sh
 		${LEMON}
 		${CMAKE_CURRENT_BINARY_DIR}
 		${CMAKE_CURRENT_SOURCE_DIR}

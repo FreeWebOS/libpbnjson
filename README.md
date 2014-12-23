@@ -26,9 +26,11 @@ Below are the tools and libraries (and their minimum versions) required to build
 - make (any version)
 - freewebos/cmake-modules-webos 1.0b
 - FIXME openwebos/PmLogLib-headers 3.0.0
+-- Not quite clear on how to resolve this. For now configugre with -D NO_LOGGING:BOOL=TRUE
 - pkg-config 0.26
 - uriparser 0.7.5
 - yajl 1.0.12 or 2.0.4
+- bash
 
 Below is the component (and its minimum version) required to use key-value logging:
 
