@@ -17,15 +17,15 @@ Below are the tools and libraries (and their minimum versions) required to build
 
 - boost-program-options 1.48
 - cmake (version required by cmake-modules-webos)
-- gcc 4.6.3
-- g++ 4.6.3
+- gcc 4.6.3 or clang
+- g++ 4.6.3 or clang
 - glib 2.30.0
 - gmp 5.0.2
 - gperf 3.0.3
 - lemon 3.7.9
 - make (any version)
-- openwebos/cmake-modules-webos 1.0.0 RC3
-- openwebos/PmLogLib-headers 3.0.0
+- freewebos/cmake-modules-webos 1.0b
+- FIXME openwebos/PmLogLib-headers 3.0.0
 - pkg-config 0.26
 - uriparser 0.7.5
 - yajl 1.0.12 or 2.0.4
@@ -35,8 +35,8 @@ Below is the component (and its minimum version) required to use key-value loggi
 - openwebos/PmLogLib 3.0.0
 
 
-How to Build on Linux
-=====================
+How to Build on Linux or FreeBSD
+================================
 
 ## Building
 
