@@ -23,7 +23,12 @@
 #include <unistd.h>
 #include <assert.h>
 #include <string.h>
+#ifndef __FreeBSD__
+/* alloca.h is not present on FreeBSD */
 #include <alloca.h>
+#else
+#include <stdlib.h>
+#endif
 #include <sys_malloc.h>
 #include <compiler/detection.h>
 #include <compiler/pure_attribute.h>
