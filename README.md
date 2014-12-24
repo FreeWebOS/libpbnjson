@@ -108,6 +108,9 @@ To view the generated HTML documentation, point your browser to
 To enable key-value logging with PmLogLib, user application can be linked
 with PmLogLib library.
 
+## TODO
++ Warnings: generates a lot of C11 warnings with Clang
+
 # Copyright and License Information
 
 Unless otherwise specified, all content, including all source code files and
