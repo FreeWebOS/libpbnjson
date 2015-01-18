@@ -20,14 +20,13 @@
 
 #include "feature.h"
 #include "validator_fwd.h"
+#include "typedefs.h"
 #include <stdbool.h>
 #include <glib.h>
 
 #ifdef __cplusplus
 extern "C" {
 #endif
-
-typedef struct _UriResolver UriResolver;
 
 /** @brief Object required class for {"required": [...]} */
 typedef struct _ObjectRequired

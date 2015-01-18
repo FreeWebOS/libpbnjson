@@ -18,7 +18,9 @@
 
 #pragma once
 
+#include "typedefs.h"
 #include "validator_fwd.h"
+#include <jtypes.h>
 #include <stdbool.h>
 #include <string.h>
 #include <stdio.h>
@@ -27,16 +29,12 @@
 extern "C" {
 #endif
 
-typedef struct _ValidationEvent ValidationEvent;
-typedef struct _ValidationState ValidationState;
 typedef struct _ObjectProperties ObjectProperties;
 typedef struct _ObjectAdditionalProperties ObjectAdditionalProperties;
 typedef struct _ObjectRequired ObjectRequired;
 typedef struct _ArrayItems ArrayItems;
-typedef struct _UriResolver UriResolver;
 typedef struct _Pattern Pattern;
 typedef struct _Number Number;
-typedef struct jvalue* jvalue_ref;
 
 
 /**
@@ -177,10 +175,10 @@ typedef struct _ValidatorVtable
 } ValidatorVtable;
 
 /** Base structure of validator */
-typedef struct _Validator
+struct _Validator
 {
 	ValidatorVtable *vtable;    /**< @brief Table of virtual functions */
-} Validator;
+};
 
 /** @name Base functions
  *  @{

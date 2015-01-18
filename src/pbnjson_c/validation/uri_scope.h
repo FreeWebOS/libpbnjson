@@ -18,6 +18,7 @@
 
 #pragma once
 
+#include "typedefs.h"
 #include <stdbool.h>
 #include <glib.h>
 
@@ -25,16 +26,14 @@
 extern "C" {
 #endif
 
-typedef struct _UriResolver UriResolver;
-
 /** @brief URI scope stack class */
-typedef struct _UriScope
+struct _UriScope
 {
 	UriResolver *uri_resolver;  /**< @brief UriResolver for convenience */
 
 	/** @brief Stack contains pointers to document URI. */
 	GSList *uri_stack;
-} UriScope;
+};
 
 /** @brief Constructor */
 UriScope *uri_scope_new(void);

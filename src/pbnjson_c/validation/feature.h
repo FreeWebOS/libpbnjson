@@ -18,13 +18,13 @@
 
 #pragma once
 
+#include "typedefs.h"
 #include <stdbool.h>
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-typedef struct _Validator Validator;
 typedef struct _Feature Feature;
 
 /**

@@ -21,12 +21,12 @@
 #include <stdbool.h>
 #include <stddef.h>
 #include "error_code.h"
+#include "typedefs.h"
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-typedef struct _Validator Validator;
 
 /** @brief The data available in the semantic actions. */
 typedef struct _ParserContext

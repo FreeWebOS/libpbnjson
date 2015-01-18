@@ -18,11 +18,12 @@
 
 #pragma once
 
+#include "typedefs.h"
+
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-typedef struct _Validator Validator;
 
 /** @brief Validator visitor enter function.
  *

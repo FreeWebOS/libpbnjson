@@ -18,6 +18,7 @@
 
 #pragma once
 
+#include "typedefs.h"
 #include "feature.h"
 #include "number.h"
 
@@ -25,7 +26,6 @@
 extern "C" {
 #endif
 
-typedef struct _Validator Validator;
 
 /** @brief Number feature application function.
  *

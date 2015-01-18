@@ -18,12 +18,13 @@
 
 #pragma once
 
+#include "typedefs.h" 
+
 #ifdef __cplusplus
 extern "C" {
 #endif
 
 typedef struct _StringSpan StringSpan;
-typedef struct _Validator Validator;
 typedef enum _ValidatorType ValidatorType;
 
 /** @brief Type parser errors */

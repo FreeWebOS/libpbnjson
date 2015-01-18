@@ -19,6 +19,7 @@
 #pragma once
 
 #include "validator.h"
+#include "typedefs.h"
 #include <stdbool.h>
 #include <glib.h>
 
