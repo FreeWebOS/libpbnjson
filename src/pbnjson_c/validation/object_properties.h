@@ -19,6 +19,7 @@
 #pragma once
 
 #include "feature.h"
+#include "typedefs.h"
 #include "validator_fwd.h"
 #include <stdbool.h>
 #include <glib.h>
@@ -26,9 +27,6 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
-
-typedef struct _UriResolver UriResolver;
-typedef struct _ValidationState ValidationState;
 
 /** @brief Object properties class */
 typedef struct _ObjectProperties

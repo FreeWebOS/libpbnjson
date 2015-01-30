@@ -19,17 +19,14 @@
 #pragma once
 
 #include "error_code.h"
+#include "typedefs.h"
+#include <jtypes.h>
 #include <stdbool.h>
 #include <glib.h>
 
 #ifdef __cplusplus
 extern "C" {
 #endif
-
-typedef struct _Validator Validator;
-typedef struct _ValidationState ValidationState;
-typedef struct _UriResolver UriResolver;
-typedef struct jvalue *jvalue_ref;
 
 /** @brief Notifications from the validation (for instance, error condition or default property). */
 typedef struct _Notification
@@ -84,13 +81,13 @@ typedef struct _Notification
  * checked and removed from the stack when the validator finishes its mission
  * (object end).
  */
-typedef struct _ValidationState
+struct _ValidationState
 {
 	UriResolver *uri_resolver;   /** @brief To find target validator for $ref as they're encountered. */
 	Notification *notify;        /** @brief To notify errors, default values. */
 	GSList *validator_stack;     /** @brief Validators being processed, current on top. */
 	GSList *context_stack;       /** @brief Data, which may be stored by validators. */
-} ValidationState;
+};
 
 
 /** @brief Constructor.

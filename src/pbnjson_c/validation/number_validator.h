@@ -20,6 +20,7 @@
 
 #include "validator.h"
 #include "number.h"
+#include <jtypes.h>
 #include <stddef.h>
 
 #ifdef __cplusplus

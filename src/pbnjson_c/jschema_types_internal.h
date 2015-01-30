@@ -21,12 +21,9 @@
 
 #include "jparse_types.h"
 #include "jgen_types.h"
+#include "validation/typedefs.h"
 #include <yajl/yajl_parse.h>
 
-
-typedef struct _Validator Validator;
-typedef struct _UriResolver UriResolver;
-typedef struct _ValidationState ValidationState;
 
 /**
  * This structure & any nestested structures (included jvalues)

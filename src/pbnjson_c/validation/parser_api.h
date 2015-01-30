@@ -19,14 +19,12 @@
 #pragma once
 
 #include "error_code.h"
+#include "typedefs.h"
 #include <stddef.h>
 
 #ifdef __cplusplus
 extern "C" {
 #endif
-
-typedef struct _Validator Validator;
-typedef struct _UriResolver UriResolver;
 
 /** @brief Schema parsing error callback.
  *

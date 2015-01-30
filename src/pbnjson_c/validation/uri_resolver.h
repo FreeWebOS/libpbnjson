@@ -18,6 +18,7 @@
 
 #pragma once
 
+#include "typedefs.h"
 #include <stdbool.h>
 #include <glib.h>
 
@@ -25,7 +26,6 @@
 extern "C" {
 #endif
 
-typedef struct _Validator Validator;
 
 /** @brief Class UriResolver
  *
@@ -35,11 +35,11 @@ typedef struct _Validator Validator;
  * in the validator hierarchies (consider a reference down the tree pointing
  * to the root validator).
  */
-typedef struct _UriResolver
+struct _UriResolver
 {
 	/** @brief Hash map of document -> hash table of fragments in the documents. */
 	GHashTable *documents;
-} UriResolver;
+};
 
 /** @brief Constructor */
 UriResolver* uri_resolver_new(void);

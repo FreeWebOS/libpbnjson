@@ -18,6 +18,7 @@
 
 #pragma once
 
+#include "typedefs.h"
 #include "validator.h"
 #include <stdbool.h>
 #include <glib.h>
@@ -27,19 +28,16 @@ extern "C" {
 #endif
 
 typedef struct _StringSpan StringSpan;
-typedef struct _Validator Validator;
-typedef struct _UriResolver UriResolver;
-typedef struct _UriScope UriScope;
 
 /** @brief Definitions is standard place for subschemas */
-typedef struct _Definitions
+struct _Definitions
 {
 	Validator base;      /**< @brief Base class. We want definitions to be visitable. */
 
 	unsigned ref_count;  /**< @brief Reference count */
 	char *name;          /**< @brief Name of the definition, key in the parent schema. */
 	GSList *validators;  /**< @brief List of subschemas with their names. */
-} Definitions;
+};
 
 /** @brief Constructor */
 Definitions* definitions_new(void);

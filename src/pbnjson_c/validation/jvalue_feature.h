@@ -18,14 +18,13 @@
 
 #pragma once
 
+#include "typedefs.h"
 #include "feature.h"
+#include <jtypes.h>
 
 #ifdef __cplusplus
 extern "C" {
 #endif
-
-typedef struct _Validator Validator;
-typedef struct jvalue *jvalue_ref;
 
 /** @brief Feature application function.
  *

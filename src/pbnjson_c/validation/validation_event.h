@@ -18,6 +18,7 @@
 
 #pragma once
 
+#include "typedefs.h"
 #include <stdbool.h>
 #include <stddef.h>
 
@@ -40,7 +41,7 @@ typedef enum
 } ValidationEventTypes;
 
 /** @brief Validation event data */
-typedef struct _ValidationEvent
+struct _ValidationEvent
 {
 	ValidationEventTypes type;    /**< @brief Type of event */
 	union
@@ -52,7 +53,7 @@ typedef struct _ValidationEvent
 			size_t len;           /**< @brief Length of the text */
 		} string;                 /**< @brief String parameter for every JSON type except boolean */
 	} value;                      /**< @brief Associated value */
-} ValidationEvent;
+};
 
 
 /** @brief Create validation event for JSON null. */

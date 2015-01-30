@@ -25,8 +25,7 @@ Below are the tools and libraries (and their minimum versions) required to build
 - lemon 3.7.9
 - make (any version)
 - freewebos/cmake-modules-webos 1.0b
-- FIXME openwebos/PmLogLib-headers 3.0.0
--- Not quite clear on how to resolve this. For now disabled logging
+- freewbos/PmLogLib-headers 3.0.0 (only headers from PmLogLib)
 - pkg-config 0.26
 - uriparser 0.7.5
 - yajl 1.0.12 or 2.0.4
@@ -34,7 +33,7 @@ Below are the tools and libraries (and their minimum versions) required to build
 
 Below is the component (and its minimum version) required to use key-value logging:
 
-- openwebos/PmLogLib 3.0.0
+- freewebos/PmLogLib 3.0.0
 
 
 How to Build on Linux or FreeBSD

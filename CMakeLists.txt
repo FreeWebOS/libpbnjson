@@ -36,7 +36,7 @@ pkg_check_modules(GLIB2 REQUIRED glib-2.0)
 include_directories(${GLIB2_INCLUDE_DIRS})
 webos_add_compiler_flags(ALL -Wall -D__STRICT_ANSI__ ${GLIB2_CFLAGS_OTHER} -pthread)
 
-set(NO_LOGGING TRUE CACHE BOOL "Do not use logging")
+set(NO_LOGGING FALSE CACHE BOOL "Do not use logging")
 if(NO_LOGGING)
 	webos_add_compiler_flags(ALL -DPJSON_NO_LOGGING)
 else()
