@@ -54,11 +54,11 @@ The directory under which the files are installed defaults to `/usr/local/webos`
 You can install them elsewhere by supplying a value for `WEBOS_INSTALL_ROOT`
 when invoking `cmake`. For example:
 
-    $ cmake -D WEBOS_INSTALL_ROOT:PATH=$HOME/projects/openwebos ..
+    $ cmake -D WEBOS_INSTALL_ROOT:PATH=$HOME/projects/freewebos ..
     $ make
     $ make install
 
-will install the files in subdirectories of `$HOME/projects/openwebos`.
+will install the files in subdirectories of `$HOME/projects/freewebos`.
 
 Specifying `WEBOS_INSTALL_ROOT` also causes `pkg-config` to look in that tree
 first before searching the standard locations. You can specify additional
@@ -77,6 +77,24 @@ To see a list of the make targets that `cmake` has generated, enter:
 
 Please note, to build library, you need to have PmLogLib headers. To
 install them, use corresponding cmake flags for PmlogLib.
+
+## Testing
+
+Refer to our Google Tests [wiki page](https://github.com/FreeWebOS/gtest/wiki)
+for instructions.
+
+This project would look for gtest in `${WEBOS_INSTALL_ROOT}/${WITH_GTEST_SRC}`
+directory, which defaults to `/usr/local/webos/usr/src/gtest`
+
+To build the test, add `-D WITH_TESTS:BOOL=TRUE` to the `cmake`
+command line and make the `docs` target:
+
+    $ cmake -D WITH_TESTS:BOOL=TRUE <other-args> ..
+
+To run the tests do a `make test` after the usual make command:
+
+    $ make
+    $ make test
 
 ## Uninstalling
 
