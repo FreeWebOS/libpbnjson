@@ -34,7 +34,13 @@ include_directories(include/public)
 
 pkg_check_modules(GLIB2 REQUIRED glib-2.0)
 include_directories(${GLIB2_INCLUDE_DIRS})
-webos_add_compiler_flags(ALL -Wall -D__STRICT_ANSI__ ${GLIB2_CFLAGS_OTHER} -pthread)
+
+if(${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD")
+	# On FreeBSD strict ANSI causes long long to be undefined
+	webos_add_compiler_flags(ALL -Wall ${GLIB2_CFLAGS_OTHER} -pthread)
+else() # Linux
+	webos_add_compiler_flags(ALL -Wall -D__STRICT_ANSI__ ${GLIB2_CFLAGS_OTHER} -pthread)
+endif()
 
 set(NO_LOGGING FALSE CACHE BOOL "Do not use logging")
 if(NO_LOGGING)
